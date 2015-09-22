@@ -18,6 +18,25 @@ public class Imc {
         altura=1.70f;
     }
     
+    public Imc(float f) {
+        //Este codigo no tiene nada que ver con los constructores
+        byte b = 2;
+        short s = 2;
+        int i = 2;
+        long l = 2;
+        
+        //Reasignamos
+        b = (byte)i;
+        l = i;
+        s = (short)l;
+        s = b;
+        l = s;
+        s = (short)l;
+        s = (short)i;
+        l = b;
+    
+    }
+    
     public float calcular() {
         float resultadoImc = peso / (altura*altura);
         return resultadoImc;
