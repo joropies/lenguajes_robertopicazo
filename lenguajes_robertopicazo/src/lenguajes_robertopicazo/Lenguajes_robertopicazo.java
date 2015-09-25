@@ -21,6 +21,11 @@ public class Lenguajes_robertopicazo {
         Imc objeto = new Imc();
         System.out.println(objeto.calcular());
         
+        // ejemplos de clases wrappers
+        String x = "12";
+        float valor = Float.parseFloat(x);
+        System.out.println(valor);
+        
 
         
     }
