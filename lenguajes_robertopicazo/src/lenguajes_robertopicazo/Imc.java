@@ -12,7 +12,7 @@ package lenguajes_robertopicazo;
 public class Imc {
     float peso;
     float altura;
-    String mensaje;
+    
 
     
     public Imc() {
@@ -48,6 +48,7 @@ public class Imc {
     }
     
     public String calcular() {
+        String mensaje = " ";
         float resultadoImc = peso / (altura * altura);
         
         if (resultadoImc < 20) {
