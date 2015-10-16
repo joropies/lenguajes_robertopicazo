@@ -19,6 +19,14 @@ public class ProbarColecciones {
         // p.obtenerusuario carga todos los usuario
         // p.size indica cuantos usuarios hay
         
+        System.out.println("LOGIN" + "\t" + "PASSWORD" + "\t" + "CALLE");
+        
+         for (Usuario u: p.obtenerusuario()){
+         
+             //System.out.println("LOGIN" + "\t" + "PASSWORD" + "DIRECCION" );
+             //System.out.println("El login es " + u.getLogin() + "\t" + u.getPassword());
+             System.out.println(u.getLogin() + "\t" + u.getPassword() + "\t" + "\t" + u.getDireccion().getCalle());
+         }    
     }
     
 }
