@@ -62,7 +62,15 @@ public class PersistenciaUsuarios2 {
     
     public Usuario buscarUno(Usuario u) throws Exception {
         File f = new File("D:\\usuarios.xxx");
+        FileInputStream fis = new FileInputStream(f);
+        ObjectInputStream ois = new ObjectInputStream(fis);
         
+        usuarios = (ArrayList<Usuario>)ois.readObject();
+        
+
+        
+        
+        usuarios.size();
         
 
         // aqui solo busca el usuario por nombre o por password o login
