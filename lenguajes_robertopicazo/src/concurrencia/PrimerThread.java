@@ -25,7 +25,7 @@ public class PrimerThread extends Thread{
             Logger.getLogger(PrimerThread.class.getName()).log(Level.SEVERE, null, ex);
         }
     
-        System.out.println("Soy el primer threadcito");
+        
     
     }
     

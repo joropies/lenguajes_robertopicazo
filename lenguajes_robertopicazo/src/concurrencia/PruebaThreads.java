@@ -19,9 +19,36 @@ public class PruebaThreads implements Runnable{
         //ejemplo con polimorfismo // Es un tipo de casting
         Runnable r2 = new PruebaThreads();
         
+        // tercer forma para crear threads ***esta es la buena***
+        // uasando clases internas anonimas
+        
+        
+        //*****************************************************
+        // clase interna anonima inicia con new Runnalbe
+        // new indica que anonima
+        // Runnalbe  es la clase a implementar
+        // ventaja: si ya no se requiere, se mata este objeto
+        
+        Thread t3 = new Thread(new Runnable() {
+
+            @Override
+            public void run() {
+
+                System.out.println("Yo soy un thread como clase interna anonima");
+            
+            }
+        }){
+        
+        //*******************************************************    
+        
+        };
+                
+        
+        
         Thread pt2 = new Thread(r2);
         pt.start();
         pt2.start();
+        t3.start();
         
     }
     
