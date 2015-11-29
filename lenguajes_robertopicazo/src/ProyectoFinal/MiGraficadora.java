@@ -11,10 +11,12 @@ package ProyectoFinal;
  */
 public class MiGraficadora extends javax.swing.JFrame {
     // se pone como atributo porque se va a acceder al factor de escala
-    ContenedorGraficadora contenedor;
+    ContenedorGraficadora contenedor = new ContenedorGraficadora();
     public static float a;
     public static float b;
     public static float c;
+
+
 
     /**
      * Creates new form MiGraficadora
@@ -156,11 +158,6 @@ public class MiGraficadora extends javax.swing.JFrame {
         
         float valor = Float.parseFloat(textoAmplitud.getText());
         float abrir = 1 / ((valor) * 100);
-        /*
-        a=Float.parseFloat(textoA.getText());
-        b=Float.parseFloat(textoB.getText());
-        c=Float.parseFloat(textoC.getText());
-        */
         ContenedorGraficadora.apertura = abrir;
         contenedor.repaint();
     }//GEN-LAST:event_botonActionPerformed

@@ -21,7 +21,7 @@ public class ContenedorGraficadora extends Canvas{
     public void paint(Graphics g) {
         super.paint(g); //To change body of generated methods, choose Tools | Templates.
         // super = invoca la version del papa para usarlo
-        
+               
         g.setColor(Color.white);
         g.fillRect(0, 0, getWidth(), getHeight());
         // getwidth da el total de la pantalla/lugar donde se va a expandir
@@ -36,7 +36,7 @@ public class ContenedorGraficadora extends Canvas{
         // grafiquemos una parabola
         
         float x0 = -100;
-        float x1 = -99;
+        float x1 = -100;
         float y0;
         float y1;
         
@@ -46,32 +46,21 @@ public class ContenedorGraficadora extends Canvas{
             y1 = -apertura *MiGraficadora.a* x1 * x1 +MiGraficadora.b*x1+MiGraficadora.c;
         */
             
-            y0 = -apertura * x0 * x0 - 10;
-            y1 = -apertura * x1 * x1 - 10;
+            y0 = -apertura * x0 * x0+10;
+            y1 = -apertura * x1 * x1+10;
             
             g.drawLine((int)x0, (int)y0, (int)x1, (int)y1);
             x0++;
             x1++;
+            //mostrar que valor tiene x0 cuando y0 llegue a 0
+            if (y0==0) {
+            
+                g.drawString("X: ", 10, 20);
+            
+            }
         
         }
         
-        // funcion seno hay que revisarla porque no esta************
-        /*
-        double xseno0 = -2 * Math.PI - 1;
-        double xseno1 = -2 * Math.PI;
-        double yseno0;
-        double yseno1;
-
-        yseno0 = Math.sin(xseno0);
-        yseno1 = Math.sin(xseno1);
-
-        for (int i = 0; i <= 200; i++) {
-        
-            g.drawLine((int)yseno0, (int)yseno1, (int)xseno0, (int)xseno1);
-        
-        }
-        //*******************************************************************
-    */    
     }
     // la clase canvas es para graficos
     // tiene un metodo que se llama paint
